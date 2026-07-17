@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<script>
+  (function () {
+    var theme = localStorage.getItem('portfolio-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    var lang = localStorage.getItem('portfolio-lang') || 'ar';
+    var dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.setAttribute('lang', lang);
+    document.documentElement.setAttribute('dir', dir);
+  })();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B0E14">
+<title>تواصل معي — خالد ناصر</title>
+<meta name="description" content="تواصل مع خالد ناصر لبدء مشروعك القادم: مطوّر واجهات أمامية ومصمم تطبيقات.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="contact">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" data-i18n-initials>خ.ن</span>
+      <span data-i18n-name>خالد ناصر</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+      <a href="about.html" data-i18n="nav.about">نبذة عني</a>
+      <a href="projects.html" data-i18n="nav.projects">الأعمال</a>
+      <a href="contact.html" data-i18n="nav.contact">تواصل معي</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch">
+        <button class="lang-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.7 3.8 6 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-6-3.8-9s1.3-6.3 3.8-9Z" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span class="lang-current">AR</span>
+        </button>
+        <ul class="lang-menu" role="listbox">
+          <li data-lang="ar" role="option" aria-selected="true">العربية <svg class="check" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li data-lang="en" role="option" aria-selected="false">English <svg class="check" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li data-lang="fr" role="option" aria-selected="false">Français <svg class="check" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+        </ul>
+      </div>
+
+      <button class="icon-btn theme-toggle" data-theme-toggle type="button" aria-label="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.6M12 18.9v2.6M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12h2.6M18.9 12h2.6M4.2 19.8L6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </button>
+
+      <button class="icon-btn nav-burger" type="button" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:20px;">
+    <div class="container">
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="contact.eyebrow">تواصل</span></span>
+      <h1 class="reveal-lines" style="font-size:clamp(1.9rem,4.4vw,3rem);">
+        <span class="line"><span class="inner" data-i18n="contact.title">لنصنع شيئًا رائعًا معًا</span></span>
+      </h1>
+      <p class="hero-sub reveal" data-i18n="contact.desc">سواء كان لديك مشروع جاهز أو مجرد فكرة أولية، يسعدني سماعها.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:20px;">
+    <div class="container contact-grid">
+
+      <div class="contact-info-card glass reveal">
+        <h3 data-i18n="contact.infoTitle">معلومات التواصل</h3>
+
+        <div class="contact-line">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 6l9 6 9-6M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+          <div>
+            <div style="font-size:.78rem;color:var(--text-faint);" data-i18n="contact.emailL">البريد الإلكتروني</div>
+            <a href="mailto:hello@khalednasser.dev">hello@khalednasser.dev</a>
+          </div>
+        </div>
+
+        <div class="contact-line">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M6.5 3.5c1 2 1.7 3.4 2.9 4.6-1 1.7-1 2.4.3 3.7 1.3 1.3 2 1.3 3.7.3 1.2 1.2 2.6 1.9 4.6 2.9.7-1.5 1-3.3.5-4.4C16.8 8.2 11.8 3.2 10.9 1.5 9.8 1 8 1.3 6.5 3.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+          <div>
+            <div style="font-size:.78rem;color:var(--text-faint);" data-i18n="contact.phoneL">الهاتف</div>
+            <a href="tel:+20100000000" dir="ltr" style="display:inline-block;">+20 100 000 0000</a>
+          </div>
+        </div>
+
+        <div class="contact-line">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.3" stroke="currentColor" stroke-width="1.5"/></svg></span>
+          <div>
+            <div style="font-size:.78rem;color:var(--text-faint);" data-i18n="contact.locL">الموقع</div>
+            <span data-i18n="contact.locV">القاهرة، مصر (عن بُعد)</span>
+          </div>
+        </div>
+
+        <div class="social-row">
+          <a class="icon-btn" href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" fill="currentColor"/></svg>
+          </a>
+          <a class="icon-btn" href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M7.5 10.5v6M7.5 7.8v.01M12 16.5v-3.7c0-1.4.8-2.3 2-2.3s2 .9 2 2.3v3.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a class="icon-btn" href="https://dribbble.com/" target="_blank" rel="noopener" aria-label="Dribbble">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M4 9.5c4.5 1.6 9 1.6 15.4.4M4.6 15.5c3.5-2 8.7-2 10.5 4.3M14.7 3.3c2 2.7 3.3 6.3 3.3 9.5 0 1.4-.2 2.7-.6 3.9" stroke="currentColor" stroke-width="1.3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="form-card glass reveal">
+        <h3 data-i18n="contact.formTitle">أرسل رسالة</h3>
+
+        <div class="form-success" data-form-success>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-i18n="contact.success">تم إرسال رسالتك بنجاح! سأتواصل معك قريبًا.</span>
+        </div>
+
+        <form data-contact-form novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="name" data-i18n="contact.nameL">الاسم الكامل</label>
+              <input type="text" id="name" name="name" required data-i18n-ph="contact.namePh" placeholder="اكتب اسمك">
+            </div>
+            <div class="field">
+              <label for="email" data-i18n="contact.emailFL">البريد الإلكتروني</label>
+              <input type="email" id="email" name="email" required data-i18n-ph="contact.emailFPh" placeholder="you@email.com">
+            </div>
+          </div>
+          <div class="field">
+            <label for="subject" data-i18n="contact.subjectL">الموضوع</label>
+            <input type="text" id="subject" name="subject" required data-i18n-ph="contact.subjectPh" placeholder="عن ماذا تريد الحديث؟">
+          </div>
+          <div class="field">
+            <label for="message" data-i18n="contact.msgL">الرسالة</label>
+            <textarea id="message" name="message" rows="5" required data-i18n-ph="contact.msgPh" placeholder="أخبرني تفاصيل مشروعك..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">
+            <span data-i18n="contact.submit">إرسال الرسالة</span>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="form-note" data-i18n="contact.note">أرد عادة خلال ٢٤ ساعة عمل.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark" data-i18n-initials>خ.ن</span>
+          <span data-i18n-name>خالد ناصر</span>
+        </a>
+        <p data-i18n="footer.tagline">أبني واجهات تفاعلية وأصمم تجارب رقمية تجمع بين الدقة الهندسية والذوق البصري.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 data-i18n="footer.colNav">الأقسام</h4>
+          <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+          <a href="about.html" data-i18n="nav.about">نبذة عني</a>
+          <a href="projects.html" data-i18n="nav.projects">الأعمال</a>
+          <a href="contact.html" data-i18n="nav.contact">تواصل معي</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.colSocial">تابعني</h4>
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.colContact">تواصل</h4>
+          <a href="mailto:hello@khalednasser.dev">hello@khalednasser.dev</a>
+          <a href="contact.html" data-i18n="nav.contact">تواصل معي</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 <span data-i18n-name>خالد ناصر</span>. <span data-i18n="footer.rights">جميع الحقوق محفوظة.</span></span>
+      <span data-i18n="footer.built">صُمم وبُرمج يدويًا بحب.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

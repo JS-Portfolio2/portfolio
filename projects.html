@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<script>
+  (function () {
+    var theme = localStorage.getItem('portfolio-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    var lang = localStorage.getItem('portfolio-lang') || 'ar';
+    var dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.setAttribute('lang', lang);
+    document.documentElement.setAttribute('dir', dir);
+  })();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B0E14">
+<title>الأعمال — خالد ناصر</title>
+<meta name="description" content="معرض أعمال خالد ناصر: تطبيقات ويب، لوحات تحكم، تطبيقات جوال، وأنظمة تصميم.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="projects">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" data-i18n-initials>خ.ن</span>
+      <span data-i18n-name>خالد ناصر</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+      <a href="about.html" data-i18n="nav.about">نبذة عني</a>
+      <a href="projects.html" data-i18n="nav.projects">الأعمال</a>
+      <a href="contact.html" data-i18n="nav.contact">تواصل معي</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch">
+        <button class="lang-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.7 3.8 6 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-6-3.8-9s1.3-6.3 3.8-9Z" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span class="lang-current">AR</span>
+        </button>
+        <ul class="lang-menu" role="listbox">
+          <li data-lang="ar" role="option" aria-selected="true">العربية <svg class="check" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li data-lang="en" role="option" aria-selected="false">English <svg class="check" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li data-lang="fr" role="option" aria-selected="false">Français <svg class="check" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+        </ul>
+      </div>
+
+      <button class="icon-btn theme-toggle" data-theme-toggle type="button" aria-label="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.6M12 18.9v2.6M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12h2.6M18.9 12h2.6M4.2 19.8L6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </button>
+
+      <button class="icon-btn nav-burger" type="button" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:20px;">
+    <div class="container">
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="projects.eyebrow">الأعمال</span></span>
+      <h1 class="reveal-lines" style="font-size:clamp(1.9rem,4.4vw,3rem);">
+        <span class="line"><span class="inner" data-i18n="projects.title">كل مشروع طبقتان: تصميم وكود</span></span>
+      </h1>
+      <p class="hero-sub reveal" data-i18n="projects.desc">مرّر المؤشر فوق أي بطاقة لترى الطبقة الخفية خلف الواجهة النهائية.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:20px;">
+    <div class="container">
+      <div class="filter-tabs reveal">
+        <button class="filter-tab active" data-filter="all" data-i18n="projects.fAll">الكل</button>
+        <button class="filter-tab" data-filter="web" data-i18n="projects.fWeb">تطبيقات ويب</button>
+        <button class="filter-tab" data-filter="dashboard" data-i18n="projects.fDash">لوحات تحكم</button>
+        <button class="filter-tab" data-filter="mobile" data-i18n="projects.fMobile">تطبيقات جوال</button>
+        <button class="filter-tab" data-filter="ui" data-i18n="projects.fUi">تصميم UI</button>
+      </div>
+
+      <div class="projects-grid" data-stagger>
+
+        <article class="project-card reveal" data-category="dashboard">
+          <div class="card-layers">
+            <div class="layer layer-code"><pre><code>.hero {
+  display: grid;
+  backdrop-filter: blur(18px);
+}
+export const kpi = () => {...}</code></pre></div>
+            <div class="layer layer-design" style="--m1:#8B6CFF;--m2:#33E1C6">
+              <span class="card-tag" data-i18n="projects.tagDash">لوحة تحكم</span>
+              <div class="mock-bar"></div>
+              <div class="mock-hero"></div>
+              <div class="mock-tiles"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 data-i18n="projects.p1t">نوفا — منصة تحليلات</h3>
+            <p data-i18n="projects.p1d">لوحة تحكم لتحليل بيانات المبيعات في الوقت الفعلي بواجهة نظيفة وسريعة.</p>
+            <ul class="tech-tags"><li>React</li><li>D3.js</li><li>Figma</li></ul>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="mobile">
+          <div class="card-layers">
+            <div class="layer layer-code"><pre><code>const map = new Atlas({
+  gestures: true,
+  theme: "midnight",
+});</code></pre></div>
+            <div class="layer layer-design" style="--m1:#33E1C6;--m2:#8B6CFF">
+              <span class="card-tag" data-i18n="projects.tagMobile">تطبيق جوال</span>
+              <div class="mock-bar"></div>
+              <div class="mock-split"><div class="a"></div><div class="b"></div></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 data-i18n="projects.p2t">أطلس — تطبيق سفر</h3>
+            <p data-i18n="projects.p2d">تطبيق جوال لتخطيط الرحلات مع خرائط تفاعلية وتوصيات ذكية.</p>
+            <ul class="tech-tags"><li>React Native</li><li>Mapbox</li><li>Sketch</li></ul>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="web">
+          <div class="card-layers">
+            <div class="layer layer-code"><pre><code>&lt;Cart items={items}
+  onCheckout={pay} /&gt;
+// stripe.confirmPayment()</code></pre></div>
+            <div class="layer layer-design" style="--m1:#FF9E7D;--m2:#33E1C6">
+              <span class="card-tag" data-i18n="projects.tagWeb">تطبيق ويب</span>
+              <div class="mock-bar"></div>
+              <div class="mock-hero"></div>
+              <div class="mock-tiles"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 data-i18n="projects.p3t">بستان — متجر إلكتروني</h3>
+            <p data-i18n="projects.p3d">متجر لبيع المنتجات العضوية بتجربة تسوّق سلسة على كل الأجهزة.</p>
+            <ul class="tech-tags"><li>Vue.js</li><li>Stripe</li><li>Tailwind</li></ul>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="ui">
+          <div class="card-layers">
+            <div class="layer layer-code"><pre><code>export function Card({ item }) {
+  return &lt;Tile data={item} /&gt;;
+}
+// tokens.spacing.md</code></pre></div>
+            <div class="layer layer-design" style="--m1:#FFB86C;--m2:#8B6CFF">
+              <span class="card-tag" data-i18n="projects.tagUi">تصميم UI</span>
+              <div class="mock-bar"></div>
+              <div class="mock-list"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 data-i18n="projects.p4t">قِمّة — نظام تصميم</h3>
+            <p data-i18n="projects.p4d">مكتبة مكوّنات موحّدة تخدم أكثر من ١٢ فريق منتج داخل شركة واحدة.</p>
+            <ul class="tech-tags"><li>Figma</li><li>Storybook</li><li>React</li></ul>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="web">
+          <div class="card-layers">
+            <div class="layer layer-code"><pre><code>const progress = track(user.id);
+&lt;ProgressRing value={progress}/&gt;</code></pre></div>
+            <div class="layer layer-design" style="--m1:#8B6CFF;--m2:#FF9E7D">
+              <span class="card-tag" data-i18n="projects.tagWeb">تطبيق ويب</span>
+              <div class="mock-bar"></div>
+              <div class="mock-split"><div class="a"></div><div class="b"></div></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 data-i18n="projects.p5t">مدار — منصة تعليمية</h3>
+            <p data-i18n="projects.p5d">منصة كورسات أونلاين بواجهة تحفّز الاستمرارية في التعلّم.</p>
+            <ul class="tech-tags"><li>Next.js</li><li>Framer Motion</li><li>Figma</li></ul>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="mobile">
+          <div class="card-layers">
+            <div class="layer layer-code"><pre><code>ARSceneView.render(model)
+  .onTap(placeFurniture)</code></pre></div>
+            <div class="layer layer-design" style="--m1:#33E1C6;--m2:#FF9E7D">
+              <span class="card-tag" data-i18n="projects.tagMobile">تطبيق جوال</span>
+              <div class="mock-bar"></div>
+              <div class="mock-hero"></div>
+              <div class="mock-tiles"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 data-i18n="projects.p6t">لمسة — تطبيق تصميم داخلي</h3>
+            <p data-i18n="projects.p6d">تطبيق يساعد المستخدم على تصور تصميم منزله عبر الواقع المعزز.</p>
+            <ul class="tech-tags"><li>Swift UI</li><li>ARKit</li><li>Figma</li></ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark" data-i18n-initials>خ.ن</span>
+          <span data-i18n-name>خالد ناصر</span>
+        </a>
+        <p data-i18n="footer.tagline">أبني واجهات تفاعلية وأصمم تجارب رقمية تجمع بين الدقة الهندسية والذوق البصري.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 data-i18n="footer.colNav">الأقسام</h4>
+          <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+          <a href="about.html" data-i18n="nav.about">نبذة عني</a>
+          <a href="projects.html" data-i18n="nav.projects">الأعمال</a>
+          <a href="contact.html" data-i18n="nav.contact">تواصل معي</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.colSocial">تابعني</h4>
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.colContact">تواصل</h4>
+          <a href="mailto:hello@khalednasser.dev">hello@khalednasser.dev</a>
+          <a href="contact.html" data-i18n="nav.contact">تواصل معي</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 <span data-i18n-name>خالد ناصر</span>. <span data-i18n="footer.rights">جميع الحقوق محفوظة.</span></span>
+      <span data-i18n="footer.built">صُمم وبُرمج يدويًا بحب.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
